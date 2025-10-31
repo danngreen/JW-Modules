@@ -571,7 +571,7 @@ struct RndModeKnob2 : JwSmallSnapKnob {
 	}
 };
 
-struct RowTextField : LedDisplayTextField {
+struct RowTextField16 : LedDisplayTextField {
 	Arrange16* module;
 	int i = -1;
 
@@ -592,9 +592,9 @@ struct RowTextField : LedDisplayTextField {
 };
 	
 struct RowDisplay : LedDisplay {
-    RowTextField* textField;
+    RowTextField16* textField;
 	void setModule(Arrange16* module, int i) {
-		textField = createWidget<RowTextField>(Vec(0, 0));
+		textField = createWidget<RowTextField16>(Vec(0, 0));
 		textField->module = module;
 		textField->i = i;
 		textField->text = "";
