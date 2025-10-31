@@ -100,7 +100,7 @@ struct SmallWhiteKnob : SvgKnob {
 		minAngle = -0.83 * M_PI;
 		maxAngle = 0.83 * M_PI;
 		shadow->opacity = 0;
-		setSVG(APP->window->loadSvg(asset::plugin(pluginInstance, "res/SmallWhiteKnob.svg")));
+		setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/SmallWhiteKnob.svg")));
 	}
 	
 	void connectLabel(CenteredLabel* label, Module* module) {
@@ -156,7 +156,7 @@ struct JwTinyKnob : SvgKnob {
 	JwTinyKnob() {
 		minAngle = -0.83 * M_PI;
 		maxAngle = 0.83 * M_PI;
-		setSVG(APP->window->loadSvg(asset::plugin(pluginInstance, "res/TinyWhiteKnob.svg")));
+		setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/TinyWhiteKnob.svg")));
 	}
 };
 
@@ -164,7 +164,7 @@ struct JwTinyGrayKnob : SvgKnob {
 	JwTinyGrayKnob() {
 		minAngle = -0.83 * M_PI;
 		maxAngle = 0.83 * M_PI;
-		setSVG(APP->window->loadSvg(asset::plugin(pluginInstance, "res/TinyWhiteGrayKnob.svg")));
+		setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/TinyWhiteGrayKnob.svg")));
 	}
 };
 
@@ -357,39 +357,39 @@ struct SmallButton : SVGSwitch {
 
 struct Snowflake : SVGWidget {
 	Snowflake() {
-		setSVG(APP->window->loadSvg(asset::plugin(pluginInstance, "res/SnowFlake.svg")));
+		setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/SnowFlake.svg")));
 	}
 };
 
 struct WavHeadLogo : SVGWidget {
 	WavHeadLogo() {
-		setSVG(APP->window->loadSvg(asset::plugin(pluginInstance, "res/WavHeadSmall.svg")));
+		setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/WavHeadSmall.svg")));
 	}
 };
 
 struct Screw_J : SVGScrew {
 	Screw_J() {
-		sw->setSVG(APP->window->loadSvg(asset::plugin(pluginInstance, "res/Screw_J.svg")));
+		sw->setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/Screw_J.svg")));
 		box.size = sw->box.size;
 	}
 };
 
 struct Screw_W : SVGScrew {
 	Screw_W() {
-		sw->setSVG(APP->window->loadSvg(asset::plugin(pluginInstance, "res/Screw_W.svg")));
+		sw->setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/Screw_W.svg")));
 		box.size = sw->box.size;
 	}
 };
 
 struct CatScrew : SVGWidget {
 	CatScrew() {
-		setSVG(APP->window->loadSvg(asset::plugin(pluginInstance, "res/Cat.svg")));
+		setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/Cat.svg")));
 	}
 };
 
 struct HairballScrew : SVGWidget {
 	HairballScrew() {
-		setSVG(APP->window->loadSvg(asset::plugin(pluginInstance, "res/Hairball.svg")));
+		setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/Hairball.svg")));
 	}
 };
 
