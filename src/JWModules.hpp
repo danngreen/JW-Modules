@@ -430,10 +430,12 @@ extern Model *modelPete;
 extern Model *modelTimer;
 
 inline int clampijw(int x, int minimum, int maximum) {
-	return clamp(x, minimum, maximum);
+	return std::clamp<int>(x, minimum, maximum);
+	// return clamp(x, minimum, maximum);
 }
 inline float clampfjw(float x, float minimum, float maximum) {
-	return fminf(fmaxf(x, minimum), maximum);
+	return std::clamp<float>(x, minimum, maximum);
+	// return fminf(fmaxf(x, minimum), maximum);
 }
 inline float rescalefjw(float x, float xMin, float xMax, float yMin, float yMax) {
 	return yMin + (x - xMin) / (xMax - xMin) * (yMax - yMin);
