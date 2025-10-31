@@ -210,7 +210,8 @@ struct RandomizeButton : TinyButton {
 
 TreeWidget::TreeWidget(Tree *module) {
 	setModule(module);
-	box.size = Vec(module ? module->width : RACK_GRID_WIDTH*20, RACK_GRID_HEIGHT);
+	module->width = RACK_GRID_WIDTH * 60;
+	box.size = Vec(module ? module->width : RACK_GRID_WIDTH*60, RACK_GRID_HEIGHT);
 
 	#ifdef METAMODULE
 	setPanel(createPanel(
@@ -225,6 +226,7 @@ TreeWidget::TreeWidget(Tree *module) {
 	}
 	#endif
 
+
 	JWModuleResizeHandle *leftHandle = new JWModuleResizeHandle;
 	JWModuleResizeHandle *rightHandle = new JWModuleResizeHandle;
 	rightHandle->right = true;
@@ -232,6 +234,7 @@ TreeWidget::TreeWidget(Tree *module) {
 	addChild(leftHandle);
 	addChild(rightHandle);
 
+	box.size = Vec(module ? module->width : RACK_GRID_WIDTH*60, RACK_GRID_HEIGHT);
 	{
 		TreeDisplay *display = new TreeDisplay();
 		display->module = module;
